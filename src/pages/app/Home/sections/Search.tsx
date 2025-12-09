@@ -153,7 +153,7 @@ export default function Search() {
                             placeholder="Informe seu destino"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
-                            className="flex-1 px-6 py-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-700"
+                            className="flex-1 px-2 py-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-700"
                         />
                         <button className="bg-gradient-to-r cursor-pointer from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                             <svg
