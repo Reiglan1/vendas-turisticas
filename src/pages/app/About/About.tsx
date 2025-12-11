@@ -1,4 +1,5 @@
 import DashboardImg from "@/assets/images/info/006-ESPLANADA-DOS-MINISTERIOS.webp";
+import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 
 export default function AboutPage() {
 
@@ -28,18 +29,26 @@ export default function AboutPage() {
                 </div>
             </div>
             <div className="container">
-                <div className="pt-20">
-                    A <strong>BSB Turismo e Entretenimento</strong> é uma empresa especializada em experiências turísticas e culturais em Brasília e região. Desde 2013, trabalhamos para apresentar a capital do Brasil de forma única, combinando história, arquitetura, cultura e entretenimento em roteiros completos e acessíveis.
-                </div>
-                <div className="pt-5">
-                    Oferecemos <strong>city tours, passeios temáticos, excursões, experiências personalizadas</strong>, além de apoio para grupos escolares, famílias, empresas e visitantes que desejam conhecer Brasília com profundidade e segurança.
-                </div>
-                <div className="pt-5">
-                    Nossa missão é transformar cada passeio em uma experiência memorável — seja mostrando os principais cartões-postais da cidade, conduzindo roteiros educativos ou criando tours exclusivos conforme o perfil de cada cliente.
-                </div>
-                <div className="pt-5 pb-20">
-                    Com atendimento humanizado, profissionais qualificados e compromisso com a qualidade, a <strong>BSB Turismo e Entretenimento</strong> se destaca por oferecer flexibilidade, responsabilidade e um olhar apaixonado pela capital federal. Mais do que viajar, queremos proporcionar conhecimento, boas histórias e momentos que marcam.
-                </div>
+                <ScrollReveal animation="fade-in-left">
+                    <div className="pt-20">
+                        A <strong>BSB Turismo e Entretenimento</strong> é uma empresa especializada em experiências turísticas e culturais em Brasília e região. Desde 2013, trabalhamos para apresentar a capital do Brasil de forma única, combinando história, arquitetura, cultura e entretenimento em roteiros completos e acessíveis.
+                    </div>
+                </ScrollReveal>
+                <ScrollReveal animation="fade-in-right">
+                    <div className="pt-5">
+                        Oferecemos <strong>city tours, passeios temáticos, excursões, experiências personalizadas</strong>, além de apoio para grupos escolares, famílias, empresas e visitantes que desejam conhecer Brasília com profundidade e segurança.
+                    </div>
+                </ScrollReveal>
+                <ScrollReveal animation="fade-in-left">
+                    <div className="pt-5">
+                        Nossa missão é transformar cada passeio em uma experiência memorável — seja mostrando os principais cartões-postais da cidade, conduzindo roteiros educativos ou criando tours exclusivos conforme o perfil de cada cliente.
+                    </div>
+                </ScrollReveal>
+                <ScrollReveal animation="fade-in-right">
+                    <div className="pt-5 pb-20">
+                        Com atendimento humanizado, profissionais qualificados e compromisso com a qualidade, a <strong>BSB Turismo e Entretenimento</strong> se destaca por oferecer flexibilidade, responsabilidade e um olhar apaixonado pela capital federal. Mais do que viajar, queremos proporcionar conhecimento, boas histórias e momentos que marcam.
+                    </div>
+                </ScrollReveal>
             </div>
         </>
     );

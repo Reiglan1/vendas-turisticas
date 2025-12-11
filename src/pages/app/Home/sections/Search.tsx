@@ -5,6 +5,7 @@ import BrasiliaFamiliaImg from "@/assets/images/info/Brasilia-em-Familia.webp";
 import CatedralMetropolitanaImg from "@/assets/images/info/002-CATEDRAL-METROPOLITANA.webp";
 import EsplanadaDosMinisteriosImg from "@/assets/images/info/006-ESPLANADA-DOS-MINISTERIOS.webp";
 import CatedralPalaciosImg from "@/assets/images/info/Catedral.webp";
+import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 
 interface Destination {
     id: number;
@@ -189,7 +190,8 @@ export default function Search() {
         <section id="destinos" className="py-16 bg-white">
             <div className="container">
                 {/* Barra de pesquisa */}
-                <div className="flex flex-col md:flex-row gap-4 mb-12">
+                <ScrollReveal animation="fade-in-up">
+                    <div className="flex flex-col md:flex-row gap-4 mb-12">
                     <div className="flex-1 flex gap-2">
                         <input
                             type="text"
@@ -226,15 +228,19 @@ export default function Search() {
                         <option value="duration">Duração</option>
                         <option value="name">Nome A-Z</option>
                     </select>
-                </div>
+                    </div>
+                </ScrollReveal>
 
                 {/* Grid de cards */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {displayedDestinations.map((destination) => (
-                        <div
+                    {displayedDestinations.map((destination, index) => (
+                        <ScrollReveal 
                             key={destination.id}
-                            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col"
+                            animation="fade-in-up"
+                            delay={((index % 3) * 100) as any}
                         >
+                            <div className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden group flex flex-col h-full"
+                            >
                             {/* Imagem */}
                             <div className="relative h-64 overflow-hidden">
                                 {destination.image ? (
@@ -311,7 +317,8 @@ export default function Search() {
                                     Saiba mais
                                 </button>
                             </div>
-                        </div>
+                            </div>
+                        </ScrollReveal>
                     ))}
                 </div>
 

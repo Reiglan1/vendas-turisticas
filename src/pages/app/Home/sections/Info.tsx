@@ -7,6 +7,7 @@ import BrasiliaMemoriaVivaImg from "@/assets/images/info/Brasilia-Memoria-Viva.w
 import BrasiliaEsplanadoDosMinisteriosImg from "@/assets/images/info/006-ESPLANADA-DOS-MINISTERIOS.webp";
 import BrasiliaCatedralMetropolitanaImg from "@/assets/images/info/002-CATEDRAL-METROPOLITANA.webp";
 import { ScrollTo } from "@/helpers";
+import ScrollReveal from "@/components/ScrollReveal/ScrollReveal";
 
 interface SlideItem {
     id: number;
@@ -121,7 +122,8 @@ export default function Info() {
             <div className="container">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Lado esquerdo - Texto e botão */}
-                    <div className="space-y-8">
+                    <ScrollReveal animation="fade-in-left">
+                        <div className="space-y-8">
                         <div>
                             <h2 className="text-5xl lg:text-5xl font-bold text-gray-800 mb-6 transition-all duration-500">
                                 {slides[currentSlide].mainTitle}
@@ -136,14 +138,16 @@ export default function Info() {
                         className="bg-gradient-to-r cursor-pointer from-azul-1 to-blue-700 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold px-8 py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                             Descobrir mais
                         </button>
-                    </div>
+                        </div>
+                    </ScrollReveal>
 
                     {/* Lado direito - Carrossel */}
-                    <div
-                        className="relative"
-                        onMouseEnter={() => setIsPaused(true)}
-                        onMouseLeave={() => setIsPaused(false)}
-                    >
+                    <ScrollReveal animation="fade-in-right">
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setIsPaused(true)}
+                            onMouseLeave={() => setIsPaused(false)}
+                        >
                         {/* Container do carrossel */}
                         <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                             <div
@@ -237,7 +241,8 @@ export default function Info() {
                                 />
                             ))}
                         </div>
-                    </div>
+                        </div>
+                    </ScrollReveal>
                 </div>
             </div>
         </section>
