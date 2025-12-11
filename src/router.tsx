@@ -14,6 +14,7 @@ import { ROUTES } from "./constants/Constants";
 // const LoginPage = lazy(() => import("@/pages/auth/Login/Login"));
 
 const HomePage = lazy(() => import("@/pages/app/Home/Home"));
+const AboutPage = lazy(() => import("@/pages/app/About/About"));
 // const LayoutAuth = lazy(() => import("@/pages/auth/LayoutAuth/LayoutAuth"));
 const LayoutApp = lazy(() => import("@/pages/app/LayoutApp/LayoutApp"));
 
@@ -80,6 +81,11 @@ const RouterConfig = createBrowserRouter([
               {
                 path: ROUTES.HOME,
                 Component: HomePage,
+                errorElement: <ErrorElement />,
+              },
+              {
+                path: ROUTES.ABOUT,
+                Component: AboutPage,
                 errorElement: <ErrorElement />,
               },
             ],

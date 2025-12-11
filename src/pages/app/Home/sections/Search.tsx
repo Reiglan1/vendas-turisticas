@@ -143,7 +143,7 @@ export default function Search() {
     const hasMore = filteredDestinations.length > ITEMS_TO_SHOW;
 
     return (
-        <section className="py-16 bg-white">
+        <section id="destinos" className="py-16 bg-white">
             <div className="container">
                 {/* Barra de pesquisa */}
                 <div className="flex flex-col md:flex-row gap-4 mb-12">
@@ -155,7 +155,7 @@ export default function Search() {
                             onChange={(e) => setSearchTerm(e.target.value)}
                             className="flex-1 px-2 py-4 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-blue-500 text-gray-700"
                         />
-                        <button className="bg-gradient-to-r cursor-pointer from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <button className="bg-gradient-to-r cursor-pointer from-azul-1 to-blue-700 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                             <svg
                                 className="w-6 h-6"
                                 fill="none"
@@ -261,7 +261,7 @@ export default function Search() {
                                 </div>
 
                                 {/* Botão - sempre no fundo */}
-                                <button className="w-full cursor-pointer bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 mt-6">
+                                <button className="w-full cursor-pointer bg-gradient-to-r from-azul-1 to-blue-700 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 mt-6">
                                     Saiba mais
                                 </button>
                             </div>
@@ -274,7 +274,7 @@ export default function Search() {
                     <div className="flex justify-center mt-12">
                         <button
                             onClick={() => setShowAll(!showAll)}
-                            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold px-12 py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer flex items-center gap-2"
+                            className="bg-gradient-to-r from-azul-1 to-blue-700 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold px-12 py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 cursor-pointer flex items-center gap-2"
                         >
                             {showAll ? (
                                 <>

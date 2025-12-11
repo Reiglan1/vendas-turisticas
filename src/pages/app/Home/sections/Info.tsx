@@ -6,6 +6,7 @@ import BrasiliaFamiliaImg from "@/assets/images/info/Brasilia-em-Familia.webp";
 import BrasiliaMemoriaVivaImg from "@/assets/images/info/Brasilia-Memoria-Viva.webp";
 import BrasiliaEsplanadoDosMinisteriosImg from "@/assets/images/info/006-ESPLANADA-DOS-MINISTERIOS.webp";
 import BrasiliaCatedralMetropolitanaImg from "@/assets/images/info/002-CATEDRAL-METROPOLITANA.webp";
+import { ScrollTo } from "@/helpers";
 
 interface SlideItem {
     id: number;
@@ -16,9 +17,17 @@ interface SlideItem {
     description: string;
 }
 
+
 export default function Info() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
+
+
+    function gotoScrool(e: any) {
+        setTimeout(() => {
+            ScrollTo(e);
+        }, 500);
+    }
 
     // Array de slides com as imagens importadas e suas descrições
     const slides: SlideItem[] = [
@@ -122,7 +131,9 @@ export default function Info() {
                             </p>
                         </div>
 
-                        <button className="bg-gradient-to-r cursor-pointer from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold px-8 py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <button
+                        onClick={() => gotoScrool("#destinos")}
+                        className="bg-gradient-to-r cursor-pointer from-azul-1 to-blue-700 hover:from-blue-600 hover:to-blue-700 text-white hover:text-amarelo-1 font-bold px-8 py-4 rounded-lg uppercase tracking-wider shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                             Descobrir mais
                         </button>
                     </div>
@@ -219,8 +230,8 @@ export default function Info() {
                                     key={index}
                                     onClick={() => goToSlide(index)}
                                     className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                                            ? "bg-blue-600 w-8"
-                                            : "bg-gray-300 hover:bg-gray-400"
+                                        ? "bg-blue-600 w-8"
+                                        : "bg-gray-300 hover:bg-gray-400"
                                         }`}
                                     aria-label={`Ir para slide ${index + 1}`}
                                 />

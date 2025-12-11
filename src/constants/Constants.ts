@@ -2,6 +2,7 @@
 export const ROUTES = {
     // Páginas logadas
     HOME: "/",
+    ABOUT: "/sobre-nos",
 
     // Páginas que não estão logadas
     LOGIN: "/login",
