@@ -10,6 +10,9 @@
   --color-azul-1: #465eff;
   --color-amarelo-1: #fcfc30;
   --color-rosa-1: #ff6e91;
+  --color-verde-1: #076633;
+  --color-verde-2: #7ED957;
+  --color-verde-3: #032e15;
 }
 
 @utility container {

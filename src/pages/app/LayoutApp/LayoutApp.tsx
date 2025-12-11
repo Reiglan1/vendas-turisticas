@@ -8,7 +8,7 @@ export default function LayoutAFooterApp() {
     return (
         <>
             <HeaderApp />
-            <main className="flex flex-col flex-1 sm:pt-20 pt-20">
+            <main className="flex flex-col flex-1 sm:pt-20 pt-18">
                 <Suspense fallback={<LoadingComponent />}>
                     <Outlet />
                 </Suspense>
