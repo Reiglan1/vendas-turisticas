@@ -4,7 +4,7 @@ export default function AboutPage() {
 
     return (
         <>
-            <div className="relative w-full h-[400px] sm:h-[400px]">
+            <div className="relative w-full h-[300px] sm:h-[400px]">
                 {/* Imagem de fundo */}
                 <img
                     className="absolute inset-0 w-full h-full object-cover"

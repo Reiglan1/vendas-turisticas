@@ -174,7 +174,7 @@ export default function HeaderApp() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed top-[70px] left-0 right-0 bg-blue-500 transition-all duration-300 overflow-hidden ${
+        className={`lg:hidden fixed top-[70px] left-0 right-0 bg-gradient-to-r from-azul-1 to-blue-700 transition-all duration-300 overflow-hidden ${
           mobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
@@ -217,7 +217,7 @@ export default function HeaderApp() {
 
               {/* Mobile Submenu */}
               {item.hasSubmenu && openSubmenu === item.label && (
-                <div className="bg-blue-600 rounded-md mb-3">
+                <div>
                   {item.submenuItems?.map((subItem) => (
                     <div
                       key={subItem}
